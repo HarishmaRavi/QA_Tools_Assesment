@@ -1,0 +1,22 @@
+
+$ show version
+show version
+
+Cisco IOS Software, Version 15.2(4)M6
+ROM: System Bootstrap, Version 15.2
+Uptime is 3 weeks, 2 days, 4 hours, 10 minutes
+System image file is "flash:c2900-universalk9-mz.SPA.bin"
+cisco 2911/K9 chassis, Processor board ID FTX1840AAV
+
+Router1# 
+
+$ show ip interface brief
+show ip interface brief
+
+Interface                  IP-Address      OK? Method Status                Protocol
+GigabitEthernet0/0          192.168.1.1     YES manual up                    up
+GigabitEthernet0/1          unassigned      YES unset  administratively down down
+GigabitEthernet0/2          10.10.10.1      YES manual up                    up
+Loopback0                   1.1.1.1         YES manual up                    up
+
+Router1# 

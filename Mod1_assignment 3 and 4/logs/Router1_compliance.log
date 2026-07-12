@@ -1,0 +1,39 @@
+COMPLIANCE REPORT - Router1
+============================================================
+[FAIL] Telnet is enabled on VTY lines (should be SSH only)
+[FAIL] Default SNMP community string(s) found: private, public
+[FAIL] HTTP server is enabled (should be disabled)
+[ALERT] Failed login attempt - user: admin, source: 203.0.113.55, reason: Invalid password
+[ALERT] Failed login attempt - user: root, source: 203.0.113.55, reason: Invalid password
+[FAIL] 2 failed login attempt(s) detected
+============================================================
+
+--- RAW: show running-config ---
+show running-config
+
+!
+hostname Router1
+!
+ip http server
+no ip http secure-server
+!
+snmp-server community public RO
+snmp-server community private RW
+!
+line vty 0 4
+ transport input telnet ssh
+ login local
+!
+end
+
+Router1# 
+
+--- RAW: show logging ---
+show logging
+
+*Jul  7 10:12:01: %SYS-5-CONFIG_I: Configured from console
+*Jul  7 11:03:44: %SEC_LOGIN-4-LOGIN_FAILED: Login failed [user: admin] [Source: 203.0.113.55] [localport: 22] [Reason: Invalid password] at 11:03:44 UTC
+*Jul  7 11:03:50: %SEC_LOGIN-4-LOGIN_FAILED: Login failed [user: root] [Source: 203.0.113.55] [localport: 22] [Reason: Invalid password] at 11:03:50 UTC
+*Jul  7 11:04:02: %SEC_LOGIN-1-QUIET_MODE_ON: Still timeleft for watching failures
+
+Router1# 

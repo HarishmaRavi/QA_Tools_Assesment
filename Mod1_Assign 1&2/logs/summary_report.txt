@@ -1,0 +1,7 @@
+SUMMARY REPORT
+Successful connections: 2
+Failed connections: 1
+
+Router1 | SUCCESS | time=11.12s | attempts=1 | reason=-
+Router2 | SUCCESS | time=13.97s | attempts=1 | reason=-
+Router3 | FAILED | time=4.2s | attempts=3 | reason=Authentication failed (bad username/password)

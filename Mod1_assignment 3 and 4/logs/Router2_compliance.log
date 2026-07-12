@@ -1,0 +1,34 @@
+COMPLIANCE REPORT - Router2
+============================================================
+[PASS] Telnet is disabled - SSH only
+[PASS] No default SNMP community strings found
+[PASS] HTTP server is disabled
+[PASS] No failed login attempts found in logs
+============================================================
+
+--- RAW: show running-config ---
+show running-config
+
+!
+hostname Router2
+!
+no ip http server
+no ip http secure-server
+!
+service password-encryption
+!
+line vty 0 4
+ transport input ssh
+ login local
+!
+end
+
+Router2# 
+
+--- RAW: show logging ---
+show logging
+
+*Jul  7 09:00:01: %SYS-5-CONFIG_I: Configured from console
+*Jul  7 09:15:22: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: admin] [Source: 192.168.1.50] [localport: 22]
+
+Router2# 
