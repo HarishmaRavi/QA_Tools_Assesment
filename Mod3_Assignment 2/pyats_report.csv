@@ -1,0 +1,6 @@
+hostname,status,ios_version,image_file,inventory_summary,error
+Router1,FAILED,,,,"failed to connect to Router1
+Failed while bringing device to ""config"" state"
+Router2,FAILED,,,,"failed to connect to Router2
+Failed while bringing device to ""config"" state"
+Router3,FAILED,,,,The following credentials have been tried without success : ['default']
