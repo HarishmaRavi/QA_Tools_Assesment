@@ -1,16 +1,4 @@
-"""
-Assignment 2 - pyATS Automation
 
-- Loads a testbed of 3 devices (our simulated fake routers from Module 1).
-- Connects to each, executes 'show version' and 'show inventory'.
-- Parses key fields out of the output using regex (our lab devices are
-  simulated and don't return real Genie-parseable structured data, so
-  we extract the fields manually instead).
-- Generates both a CSV and an HTML report.
-- Includes exception handling: Router3 is deliberately configured with
-  a wrong password in testbed.yaml, so you can see a real FAILED entry
-  and confirm the exception handling actually works.
-"""
 
 import re
 import csv
