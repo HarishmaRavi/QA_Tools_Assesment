@@ -1,18 +1,6 @@
 """
 Assignment 6 - Network Discovery Tool
 
-Uses Scapy to:
-  - Perform ARP discovery on the local subnet
-  - Display IP Address and MAC Address of each responding device
-  - Detect duplicate IP addresses (more than one MAC answering for
-    the same IP - a sign of IP conflicts or ARP spoofing)
-  - Save results into a CSV file
-
-IMPORTANT: ARP scanning uses raw Ethernet frames and requires root
-privileges. Run with sudo, using the venv's python directly:
-
-    sudo venv/bin/python3 network_discovery.py
-    sudo venv/bin/python3 network_discovery.py 192.168.43.0/24
 """
 
 import sys
