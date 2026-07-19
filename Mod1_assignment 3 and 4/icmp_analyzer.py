@@ -1,17 +1,3 @@
-"""
-Assignment 3 - Packet Analysis using Scapy
-
-Sends ICMP Echo Requests, captures replies, calculates average
-response time, and displays packet loss percentage.
-
-IMPORTANT: Sending raw ICMP packets requires root privileges on Linux.
-Run this script with sudo, using the venv's python directly:
-
-    sudo venv/bin/python3 icmp_analyzer.py
-    sudo venv/bin/python3 icmp_analyzer.py 127.0.0.1
-    sudo venv/bin/python3 icmp_analyzer.py 8.8.8.8 --count 10
-"""
-
 import sys
 import time
 import argparse
