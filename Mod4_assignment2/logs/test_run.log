@@ -1,0 +1,6 @@
+2026-07-19 07:38:31,010 | INFO | conftest | Launching browser: chrome
+2026-07-19 07:38:44,335 | INFO | test_login_search_logout | Starting login step
+2026-07-19 07:38:54,941 | INFO | test_login_search_logout | Login successful, dashboard loaded
+2026-07-19 07:38:54,941 | INFO | test_login_search_logout | Starting search step
+2026-07-19 07:39:13,457 | ERROR | conftest | Test 'test_login_search_logout' FAILED. Screenshot saved: C:\Users\Harishma R\OneDrive\Desktop\mod4\assignment2\screenshots\test_login_search_logout.png
+2026-07-19 07:39:13,461 | INFO | conftest | Closing browser
