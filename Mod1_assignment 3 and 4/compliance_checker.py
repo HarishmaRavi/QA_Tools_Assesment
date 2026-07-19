@@ -1,16 +1,3 @@
-"""
-Assignment 4 - Configuration Compliance Checker
-
-Connects to each device, pulls its running-config and logs, and checks:
-  1. Is Telnet still enabled on the VTY lines? (should be SSH only)
-  2. Is the default/well-known SNMP community string ("public"/"private") active?
-  3. Is the HTTP server enabled? (should be disabled - "no ip http server")
-  4. Are there any failed-login / unauthorized-access attempts in the logs?
-     (detected using regex against %SEC_LOGIN-4-LOGIN_FAILED style messages)
-
-Saves a per-device compliance report to logs/<hostname>_compliance.log
-"""
-
 import csv
 import os
 import re
