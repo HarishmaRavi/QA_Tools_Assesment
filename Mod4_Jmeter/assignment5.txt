@@ -1,0 +1,7 @@
+1.Meeting requirements? No. Both thresholds are blown: response time is 4.5 sec (needs <2 sec) and error rate is 12% (needs <1%).
+
+2.Metrics indicating a problem: Average Response Time and Error Rate are both failing. Throughput (120 req/sec) isn't inherently bad, but combined with the high error rate it suggests the server is struggling to keep up with 500 users.
+
+3.Possible causes: server/DB connection pool exhaustion under load, insufficient thread/worker capacity, slow queries or missing indexes, memory/CPU saturation, network or timeout misconfiguration, or a downstream dependency (API, cache) becoming a bottleneck.
+
+4.Next steps: re-run with a ramp-up (not all 500 users at once) to find the breaking point, check server-side logs/APM for errors at the failure moments, isolate which transaction is slowest, test in smaller increments (100→200→300...) to find max sustainable load, then retest after fixing the bottleneck to confirm it meets the <2 sec / <1% targets.
