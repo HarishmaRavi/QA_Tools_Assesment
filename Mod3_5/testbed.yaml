@@ -1,0 +1,30 @@
+devices:
+  R1:
+    os: ios
+    platform: ios
+    type: router
+    connections:
+      cli:
+        protocol: telnet
+        ip: 127.0.0.1
+        port: 2001
+
+  SW1:
+    os: iosxe
+    platform: iosxe
+    type: switch
+    connections:
+      cli:
+        protocol: telnet
+        ip: 127.0.0.1
+        port: 2002
+
+  N1:
+    os: nxos
+    platform: nxos
+    type: switch
+    connections:
+      cli:
+        protocol: telnet
+        ip: 127.0.0.1
+        port: 2003
